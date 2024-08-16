@@ -8,7 +8,7 @@
 }
 
 body {
-    background-color: blueviolet;
+    background-color: rgb(39, 0, 75);
     background-image: url("Assets/bg.png");
     background-attachment: fixed;
     background-size: cover;
