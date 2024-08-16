@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link type="background" href="Assets/bg.png">
+    <link rel="icon" href="Assets/icons/icon.ico" type="image/x-icon">
+    <title>Talal's Website</title>
+</head>
+<body>
+    <div id="what">
+        <div id="close" class="icons" onclick="whatClose()"></div>
+        <p id="hh" class="temp_text">Here's my Whatsapp number :)</p>
+        <p id="num" class="temp_text">03359378102</p>
+    </div>
+    
+    <header id="name_and_pic" class="tobeblur">
+        <div id="prof_pic"></div>
+        <h id="name">Mirza Talal Ahmed</h>
+    </header>
+
+    <section id="container">
+        <div id="my_img">
+        </div>
+        <h id="wel">Welcome!</h>
+        <div id="mobile_proceed" onclick="proceed()">PROCEED</div>
+        <button id='proceed_button' class="proceed" onclick="proceed()">
+            <span class="circle" aria-hidden="true">
+            <span class="icon arrow"></span>
+            </span>
+            <span class="button-text">Proceed</span>
+        </button>
+    </section>
+    
+    <section id="content_window" class="tobeblur">
+        <div id="bttns">
+            <div id="color_mode" onclick="mode()">
+                <div id="lightmode">
+                    <div id="l_icon"></div>
+                    <h id="light">Light</h>
+                </div>
+                <div id="darkmode">
+                    <div id="d_icon"></div>
+                    <h id="dark">Dark</h>
+                </div>
+                <div id="slider"></div>
+                <div id="mobile_slider"></div>     
+            </div>
+            <nav id="container1">
+                <div id="selection"></div>
+                <div class="buttons clickable" id="btn1">
+                    <div class="icons" id="home"></div>
+                    <h class="n">Home</h>            
+                </div>
+                <div class="buttons clickable" id="btn2">
+                    <div class="icons" id="resume"></div>
+                    <h class="n">Resume</h>        
+                </div>
+                <div class="buttons clickable" id="btn3">
+                    <div class="icons" id="contact"></div>
+                    <h class="n">Contact me</h>    
+                </div>
+                <div class="buttons clickable" id="btn4">
+                    <div class="icons" id="business"></div>
+                    <h class="n">businesses</h>
+                </div>
+            </nav>
+        </div>
+        <section id="main">
+            <div id="home_page">
+                <p class="temp_text" id="home_c">Here you will find the latest and greatest about me!</p>
+            </div>
+            <div id="resume_page">
+                <div class="i" id="b_info">
+                    <h class="j">Basic Info about me.</h>
+                    <div class="icons" id="basic"></div>
+                </div>
+                <div class="i" id="cv">
+                    <h class="j">Proper CV.</h>
+                    <div class="icons" id="c"></div>
+                </div>
+            </div>
+            <div style="margin-top: -50px;" id="contact_page">
+                <p class="temp_text" id="contact_text">Wanna chat with me?</p>
+                <div style="display: flex; align-items: center;">
+                    <div class="icons" style="margin-top: -50px;" id="mail"></div>
+                    <a href="mailto:talalmughal996@gmail.com" style="margin-top: -50px;cursor: pointer; color: black;" id="email">talalmughal996@gmail.com</a>
+                </div>
+                <section id="social_media">
+                    <div class="social_icons" id="insta"></div>
+                    <div class="social_icons" id="facebook"></div>
+                    <div class="social_icons" id="whatsapp" onclick="whatsapp()"></div>
+                    <div class="social_icons" id="github"></div>
+                </section>
+            </div>
+            <div id="business_page">
+                <p class="temp_text" id="business_c">Haven't yet, but soon InshaAllah.</p>
+            </div>
+        </section>
+    </section>
+</body>
+<script src="Source_Code.js"></script>
+</html>
