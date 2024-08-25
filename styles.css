@@ -446,21 +446,23 @@ nav {
 }
 
 #insta {
-    background-image: url("Assets/icons/instagram.png")
+    background-image: url("Assets/icons/instagram.png");
+    background-color: rgb(238, 58, 13);
 }
 
 #facebook {
     background-image: url("Assets/icons/facebook.png");
     background-color: #ffffff;
-    border-radius: 15px;
 }
 
 #whatsapp {
     background-image: url("Assets/icons/whatsapp.png");
+    background-color: rgb(18, 179, 18);
 }
 
 #github {
     background-image: url("Assets/icons/github.png");
+    background-color: #161616;
 }
 
 .social_icons {
@@ -471,6 +473,7 @@ nav {
     cursor: pointer;
     scale: 1;
     animation: kkk 150ms ease-in-out;
+    border-radius: 18px;
 }
 @keyframes page_in {
     from{
