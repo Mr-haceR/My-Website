@@ -180,39 +180,40 @@ button:hover .button-text {
 #color_mode {
     display: flex;
     align-items: center;
-    justify-content:space-between;
-    padding: 0 10px 0 10px;
-    width: 200px;
-    height: 30px;
+    width: 100%;
+    height: 7%;
     background-color: #a9a9a9;
     border-radius: 10px;
+    position: relative;
 }
 
 #slider {
-    width: 98px;
-    height: 24px;
+    width: 50%;
+    height: 80%;
     background-color: rgb(40, 40, 70);
     border-radius: 8px;
-    margin-left: -6px;
+    left: 1.5%;
     position: absolute;
 }
 
 @keyframes slider_animation {
     to{
-        margin-left: 109px
+        left: 48.5%;
     }
 }
 @keyframes slider_reverse {
     from{
-        margin-left: 109px;
-    }to{
-        margin-left: -6px;
+        left: 48.5%;
+    }
+    to{
+        left: 1.5%
     }
 }
+
 #lightmode {
     display: flex;
     align-items: center;
-    margin-left: 16px;
+    margin-left: 15%;
     z-index: 1;
     user-select: none;
 }
@@ -228,15 +229,15 @@ button:hover .button-text {
 #light, #dark {
     color: #ffffff;
     font-family: TexGyreAdventor;
+    font-size: 1.2vw;
 }
-
 
 #darkmode {
     display: flex;
     align-items: center;
+    margin-left: 25%;
     z-index: 1;
-    user-select: none;
-    margin-left: 50px;
+    user-select: none;    
 }
 
 #d_icon {
@@ -248,13 +249,12 @@ button:hover .button-text {
 }
 
 .buttons {
-    width: 200px;
     height: 60px;
     border-radius: 10px;
     display: flex;
-    padding: 0 10px 0 10px;
     align-items: center;
     gap: 10px;
+    padding-left: 5%;
     color: #000000;
     font-family: poppins;
     font-size: 1.5rem;
@@ -293,22 +293,22 @@ button:hover .button-text {
 }
 
 #bttns {
+    width: 20%;
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 50px;
 }
 
 nav {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 10px;
     position: relative;
 }
 
 #selection {
     position: absolute;
-    width: 220px;
+    width: 100%;
     height: 60px;
     border-radius: 10px;
     top: 0;
@@ -320,6 +320,7 @@ nav {
 .n {
     user-select: none;
     pointer-events: none;
+    font-size: 1.9vw;
     z-index: 2;
 }
 
@@ -335,7 +336,7 @@ nav {
 
 .temp_text {
     font-family: TexGyreAdventor;
-    font-size: 5rem;
+    font-size: 5.5vw;
     pointer-events: none;
     background-image: linear-gradient(to bottom right, rgb(252, 0, 0), rgb(74, 74, 255));
     background-clip: text;
@@ -529,12 +530,6 @@ nav {
     }    
 }
 
-@media (max-width: 1100px) {
-    #name {
-        font-size: 5rem;
-    }
-}
-
 @media (max-width: 1000px) {
     #contact_text {
         font-size: 3.8rem;
@@ -542,10 +537,6 @@ nav {
 }
 
 @media (max-width: 900px) {
-    #name {
-        font-size: 4rem;
-    }
-
     #contact_text {
         font-size: 3rem;
         margin-top: 50px;
@@ -555,9 +546,7 @@ nav {
 
 @media (max-width: 830px) {
     #bttns {
-        width: 50px;
-        justify-content: center;
-        margin-left: 3px;
+        width: 60px;
     }
 
     #light, #dark {
@@ -565,11 +554,10 @@ nav {
     }
 
     #color_mode {
-        margin-top: -50px;
-        margin-left: 3px;
-        width: 30px;
+        width: 100%;
         height: 100px;
         border-radius: 15px;
+        display: flex;
         position: relative;
     }
 
@@ -592,26 +580,26 @@ nav {
         display: none;
     }
     #mobile_slider {
-        width: 45px;
+        width: 54px;
         height: 50px;
         border-radius: 15px;
         background-color: rgb(40, 40, 70);
         position: absolute;
-        left: 5%;
-        top: 3%;
+        left: 3px;
+        top: 3px;
         cursor: pointer;
     }
     @keyframes mob_slider_dark {
         to{
-            top: 39%;
+            top: 47px;
         }
     }
     @keyframes mob_slider_light {
         from{
-            top: 39%;
+            top: 47px;
         }
         to{
-            top: 3%;
+            top: 3px;
         }
     }
     .n {
@@ -619,50 +607,33 @@ nav {
     }
 
     .buttons {
-        width: 45px;
+        width: 60px;
         justify-content: center;
         border-radius: 60%;
+        padding-left: 0%;
     }
 
     #selection {
         width: 60px;
-        margin-left: 3px;
         border-radius: 50%;
     }
- 
-}
-
-@media (max-width: 768px) {
-    #name {
-        font-size: 3.6rem;
-    }
-
-    #prof_pic {
-        scale: 0.8;
+    nav {
+        margin-top: -50%;
     }
 }
 
-@media (max-width: 680px) {
-    #name {
-        font-size: 2.8rem;
+@media (max-width: 960px) {
+    .i {
+        scale: 0.9;
+    }
+    #resume_page {
+        gap: 10px;
     }
 }
-
-@media (max-width: 580px) {
-    #name {
-        font-size: 2.5rem;
-    }
-}
-
 @media (max-width: 480px) {
-    #name {
-        font-size: 0.5rem;
+    body {
+        overflow-y: auto;
     }
-
-    #prof_pic {
-        scale: 0.6;
-    }
-
     #container {
         margin-top: -50px;
         text-align: center;
@@ -703,8 +674,16 @@ nav {
         opacity: 1;
     }
 
+    #color_mode {
+        margin-top: 20px;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
     .temp_text {
-        font-size: 3rem;
+        font-size: 11vw;
     }
     * {
         -webkit-tap-highlight-color: transparent;
@@ -712,22 +691,27 @@ nav {
 
     #name_and_pic {
         flex-direction: column;
-        height: 150px;
+        justify-content: center;
+        gap: 5px;
+        height: 23vh;
     }
+
     #prof_pic
     {
-        scale: 0.9;
+        width: 128px;
+        height: 128px; 
     }
     #name {
-        font-size: 2.52rem;
+        font-size: 9vw;
         font-weight: 900;
+        margin: 0;
     }
     #main {
         border-radius: 30px;
     }
     #resume_page {
         flex-direction: column;
-        gap: 100px;
+        gap: 50px;
         
     }
     .i {
@@ -744,7 +728,7 @@ nav {
         margin-top: 10px;
     }
     #contact_text {
-        font-size: 2.5rem;
+        font-size: 9vw;
         justify-self: center;
         text-align: center;
     }
@@ -761,7 +745,7 @@ nav {
     }
     @keyframes content_window_popup {
         to{
-            height: 530px;
+            height: 77vh;
             opacity: 1;
         }
     }
@@ -786,7 +770,18 @@ nav {
         background-color: rgb(40, 60, 70);
         cursor: pointer;
     }
-    #color_mode {
-        margin-top: 10px;
+}
+
+@media (max-height: 700px) and (max-width: 480px)  {
+    #name_and_pic {
+        height: 25vh;
+    }
+    
+
+    @keyframes content_window_popup {
+        to{
+            height: 75vh;
+            opacity: 1;
+        }
     }
 }
