@@ -27,6 +27,7 @@ body {
     height: 400px;
     font-family: poppins;
     justify-content: center;
+    justify-self: center;
     display: grid;
     grid-template-columns: repeat(1fr);
 }
@@ -503,7 +504,6 @@ nav {
     border-radius: 20px;
     border: 2px solid rgb(255, 20, 78);
     z-index: 5;
-    position: relative;
 }
 #close {
     width: 20px;
