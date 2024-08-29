@@ -493,33 +493,32 @@ nav {
 #what {
     display: flex;
     flex-direction: column;
+    align-items: center;
     scale: 0;
     position: absolute;
     padding: 20px;
-    width: 330px;
-    height: 380px;
+    width: 50%;
+    height: 60%;
     background-color: #ffffff;
     border-radius: 20px;
     border: 2px solid rgb(255, 20, 78);
     z-index: 5;
+    position: relative;
 }
 #close {
     width: 20px;
     height: 20px;
-    margin-left: 92%;
+    position: absolute;
+    right: 3%;
     background-image: url("Assets/icons/close.png");
     background-repeat: no-repeat;
     background-size: contain;
     cursor: pointer;
 }
-#hh {
-    font-size: 2rem;
-    align-self: center;
-    margin-left: -10px;
-}
-#num {
-    margin-left: 30px;
-    font-size: 2.5rem;
+
+#num, #hh {
+    font-size: 3vw;
+    justify-self: center;
 }
 
 
@@ -545,6 +544,14 @@ nav {
 }
 
 @media (max-width: 830px) {
+    #what {
+        width: 80%;
+        height: 40%;
+        overflow-y: auto;
+    }
+    #num, #hh {
+        font-size: 7vw;
+    }
     #bttns {
         width: 60px;
     }
