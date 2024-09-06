@@ -300,7 +300,9 @@ button:hover .button-text {
     height: 100%;
     display: flex;
     flex-direction: column;
-    gap: 80px;
+    gap: 50px;
+    overflow: auto;
+    scrollbar-width: none;
 }
 
 nav {
@@ -365,9 +367,37 @@ nav {
 }
 
 #resume_page {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+    scrollbar-width: nones;
+}
+#resume_page::-webkit-scrollbar {
+    display: none;
+}
+
+.aboutheadings {
+    font-family: TexGyreAdventor;
+    font-size: 3vw;
+    margin: 0;
+    background-image: linear-gradient(to bottom right, rgb(252, 0, 0), rgb(74, 74, 255));
+    background-clip: text;
+    color: transparent;
+}
+.aboutcontent {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.boxes {
+    display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px;
+    font-family: poppins;
+    font-size: 2vw;
 }
 
 .i {
