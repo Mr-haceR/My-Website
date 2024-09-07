@@ -13,6 +13,9 @@ const ii = document.querySelectorAll(".i")
 const what = document.getElementById("what");
 const boxes = document.querySelectorAll(".boxes");
 const mobSlider = document.getElementById("mobile_slider");
+const blocks = document.querySelectorAll(".blocks");
+const uploaddate = document.querySelectorAll(".uploaddate");
+const uploadcontent = document.querySelectorAll(".uploadcontent");
 
 function proceed() {
     bodyElement.style.animation = "remove_blur 150ms linear forwards";
@@ -51,6 +54,19 @@ function mode() {
             e.style.border = "border: 1px solid rgba(0, 0, 0, 0.418)";
         });
 
+        blocks.forEach(e => {
+            e.style.color = "white";
+            e.style.border = "border: 1px solid rgba(0, 0, 0, 0.418)";
+        });
+
+        uploaddate.forEach(e => {
+            backgroundColor = "rgba(0, 0, 0, 0.623);"
+        });
+
+        uploadcontent.forEach(e => {
+            backgroundColor = "rgba(0, 0, 0, 0.623);"
+        });
+
         i = i + 1;
     } 
     
@@ -77,6 +93,19 @@ function mode() {
         boxes.forEach(e => {
             e.style.color = "black";
             e.style.border = "border: 1px solid rgba(255, 255, 255, 0.418)";
+        });
+
+        blocks.forEach(e => {
+            e.style.color = "black";
+            e.style.border = "border: 1px solid rgba(255, 255, 255, 0.418)";
+        });
+
+        uploaddate.forEach(e => {
+            backgroundColor = "rgba(0, 0, 0, 0.623);"
+        });
+
+        uploadcontent.forEach(e => {
+            backgroundColor = "rgba(0, 0, 0, 0.623);"
         });
 
         i = i - 1;
