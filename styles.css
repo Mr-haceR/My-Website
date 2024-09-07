@@ -215,17 +215,9 @@ button:hover .button-text {
 #lightmode {
     display: flex;
     align-items: center;
-    margin-left: 15%;
+    margin-left: 18%;
     z-index: 1;
     user-select: none;
-}
-
-#l_icon {
-    width: 13px;
-    height: 12px;
-    background-image: url("Assets/lightmose_icon.png");
-    background-repeat: no-repeat;
-    background-size: contain;
 }
 
 #light, #dark {
@@ -237,17 +229,9 @@ button:hover .button-text {
 #darkmode {
     display: flex;
     align-items: center;
-    margin-left: 25%;
+    margin-left: 31%;
     z-index: 1;
     user-select: none;    
-}
-
-#d_icon {
-    width: 13px;
-    height: 14px;
-    background-image: url("Assets/darkmode_icon.png");
-    background-repeat: no-repeat;
-    background-size: contain;
 }
 
 .buttons {
@@ -610,6 +594,11 @@ nav {
     }
 
     #l_icon {
+        width: 13px;
+        height: 12px;
+        background-image: url("Assets/lightmose_icon.png");
+        background-repeat: no-repeat;
+        background-size: contain;
         position: absolute;
         top: 15%;
         left: 45%;
@@ -618,6 +607,11 @@ nav {
     }
 
     #d_icon {
+        width: 13px;
+        height: 14px;
+        background-image: url("Assets/darkmode_icon.png");
+        background-repeat: no-repeat;
+        background-size: contain;
         position: absolute;
         bottom: 15%;
         left: 40%;
