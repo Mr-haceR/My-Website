@@ -3,7 +3,6 @@ const container = document.getElementById("container");
 const info = document.getElementById("name_and_pic");
 const content_window = document.getElementById("content_window");
 const slider = document.getElementById("slider");
-const l_icon = document.getElementById("l_icon");
 const elements = document.querySelectorAll(".buttons");
 const icons = document.querySelectorAll(".icons");
 const selection = document.getElementById("selection");
@@ -13,6 +12,7 @@ const email = document.getElementById("email")
 const ii = document.querySelectorAll(".i")
 const what = document.getElementById("what");
 const boxes = document.querySelectorAll(".boxes");
+const mobSlider = document.getElementById("mobile_slider");
 
 function proceed() {
     bodyElement.style.animation = "remove_blur 150ms linear forwards";
@@ -22,7 +22,7 @@ function proceed() {
     main.style.display = "flex";
 }
 
-const mobSlider = document.getElementById("mobile_slider");
+
 
 let i = 0;
 function mode() {
@@ -30,7 +30,10 @@ function mode() {
         slider.style.animation = "slider_animation 400ms linear forwards";
         mobSlider.style.animation = "mob_slider_dark 200ms linear forwards";
         content_window.style.backgroundColor = "rgb(28, 28, 28)";
-        main.style.backgroundColor = "#242424"
+        main.style.backgroundColor = "#242424";
+        email.style.color = "white";
+        what.style.backgroundColor = "#242424";
+
         elements.forEach(element => {
             element.style.color = "white";
         });
@@ -38,21 +41,27 @@ function mode() {
         icons.forEach(icon => {
             icon.style.filter = "invert(100%)";
         });
+
         ii.forEach(ee => {
             ee.style.backgroundColor = "rgb(47, 47, 47)";
         });
-        email.style.color = "white"
-        what.style.backgroundColor = "#242424"
+
         boxes.forEach(e => {
             e.style.color = "white";
             e.style.border = "border: 1px solid rgba(0, 0, 0, 0.418)";
         });
+
         i = i + 1;
-    } else if (i == 1) {
+    } 
+    
+    else if (i == 1) {
         slider.style.animation = "slider_reverse 400ms linear forwards";
         mobSlider.style.animation = "mob_slider_light 200ms linear forwards";
         content_window.style.backgroundColor = "white";
-        main.style.backgroundColor = "#c7c6c6"
+        main.style.backgroundColor = "#c7c6c6";
+        email.style.color = "black";
+        what.style.backgroundColor = "white";
+
         elements.forEach(element => {
             element.style.color = "black";
         });
@@ -60,26 +69,20 @@ function mode() {
         icons.forEach(icon => {
             icon.style.filter = "invert(0%)";
         });
+
         ii.forEach(ee => {
-            ee.style.backgroundColor = "white"
+            ee.style.backgroundColor = "white";
         });
-        email.style.color = "black"
-        what.style.backgroundColor = "white"
+        
         boxes.forEach(e => {
             e.style.color = "black";
             e.style.border = "border: 1px solid rgba(255, 255, 255, 0.418)";
         });
+
         i = i - 1;
     }
 }
 
-navButtons.forEach(button => {
-    button.addEventListener("click", (event) => {
-        moveSelection(event.currentTarget);
-        moveElementToPosition(event.target);
-        page_change(event.target.id)
-    });
-});
 function moveSelection(target) {
     const targetRect = target.getBoundingClientRect();
     const containerRect = target.parentElement.getBoundingClientRect();
@@ -87,6 +90,7 @@ function moveSelection(target) {
 
     selection.style.top = `${offsetTop}px`;
 }
+
 function moveElementToPosition(targetElement) {
     const animatedElement = document.getElementById('selection');
     const targetRect = targetElement.getBoundingClientRect();
@@ -111,51 +115,64 @@ function moveElementToPosition(targetElement) {
 
     requestAnimationFrame(animate);
 }
+
 var selected_page = document.getElementById("home_page");
 function changer(obj)
 {
     selected_page.style.animation = "page_out 250ms linear forwards";
     selected_page.style.display = "none";
     selected_page.style.opacity = 0;
-    selected_page = document.getElementById(obj)
-    selected_page.style.display = "flex"
+    selected_page = document.getElementById(obj);
+    selected_page.style.display = "flex";
     selected_page.style.animation = "page_in 250ms linear forwards";
 }
-function page_change(i){
-    if (i == "btn1"){
-        changer("home_page")
+
+function page_change(i) {
+    if (i == "btn1") {
+        changer("home_page");
     }
-    else if (i == "btn2"){
-        changer("resume_page")
+    else if (i == "btn2") {
+        changer("resume_page");
     }
-    else if (i == "btn3"){
-       changer("contact_page")
+    else if (i == "btn3") {
+       changer("contact_page");
     }
-    else if (i == "btn4"){
-        changer("business_page")
-    }
-}
-document.querySelectorAll(".social_icons").forEach(social => {
-    social.addEventListener('click', event =>{
-        redirecter(event.target.id)
-    });
-});
-function opener(object){
-    var newTab = window.open();
-    newTab.location.href = object;
-}
-function redirecter(social_icon_id){
-    if (social_icon_id == "insta"){
-        opener("https://www.instagram.com/mirza__sab69/")
-    }
-    else if (social_icon_id == "facebook"){
-        opener("https://www.facebook.com/profile.php?id=100044601694592")
-    }
-    else if (social_icon_id == "github"){
-        opener("https://github.com/Mr-haceR")
+    else if (i == "btn4") {
+        changer("business_page");
     }
 }
 
+navButtons.forEach(button => {
+    button.addEventListener("click", (event) => {
+        moveSelection(event.currentTarget);
+        moveElementToPosition(event.target);
+        page_change(event.target.id)
+    });
+});
+
+
+function opener(object) {
+    var newTab = window.open();
+    newTab.location.href = object;
+}
+
+function redirecter(social_icon_id) {
+    if (social_icon_id == "insta") {
+        opener("https://www.instagram.com/mirza__sab69/");
+    }
+    else if (social_icon_id == "facebook") {
+        opener("https://www.facebook.com/profile.php?id=100044601694592");
+    }
+    else if (social_icon_id == "github") {
+        opener("https://github.com/Mr-haceR");
+    }
+}
+
+document.querySelectorAll(".social_icons").forEach(social => {
+    social.addEventListener('click', event => {
+        redirecter(event.target.id);
+    });
+});
 
 const tobeblur = document.querySelectorAll('.tobeblur');
 function whatsapp() {
