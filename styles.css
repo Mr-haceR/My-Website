@@ -396,6 +396,9 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.418);
+    border-radius: 20px;
     font-family: poppins;
     font-size: 2vw;
 }
@@ -587,7 +590,9 @@ nav {
         font-size: 7vw;
     }
     #bttns {
-        width: 65px;
+        -ms-overflow-style: none;
+        width: 80px;
+        overscroll-behavior: none;
     }
     nav {
         gap: 20px;
@@ -597,7 +602,7 @@ nav {
     }
 
     #color_mode {
-        width: 100%;
+        width: 96%;
         min-height: 100px;
         border-radius: 15px;
         display: flex;
@@ -623,7 +628,7 @@ nav {
         display: none;
     }
     #mobile_slider {
-        width: 59px;
+        width: 90%;
         height: 50px;
         border-radius: 15px;
         background-color: rgb(40, 40, 70);
@@ -666,6 +671,12 @@ nav {
         width: 65px;
         height: 65px;
         border-radius: 50%;
+    }
+    .aboutheadings {
+        font-size: 6vw;
+    }
+    .boxes {
+        font-size: 4vw;
     }
 }
 

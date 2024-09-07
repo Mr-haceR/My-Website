@@ -12,6 +12,7 @@ const main = document.getElementById("main");
 const email = document.getElementById("email")
 const ii = document.querySelectorAll(".i")
 const what = document.getElementById("what");
+const boxes = document.querySelectorAll(".boxes");
 
 function proceed() {
     bodyElement.style.animation = "remove_blur 150ms linear forwards";
@@ -42,6 +43,10 @@ function mode() {
         });
         email.style.color = "white"
         what.style.backgroundColor = "#242424"
+        boxes.forEach(e => {
+            e.style.color = "white";
+            e.style.border = "border: 1px solid rgba(0, 0, 0, 0.418)";
+        });
         i = i + 1;
     } else if (i == 1) {
         slider.style.animation = "slider_reverse 400ms linear forwards";
@@ -60,6 +65,10 @@ function mode() {
         });
         email.style.color = "black"
         what.style.backgroundColor = "white"
+        boxes.forEach(e => {
+            e.style.color = "black";
+            e.style.border = "border: 1px solid rgba(255, 255, 255, 0.418)";
+        });
         i = i - 1;
     }
 }
